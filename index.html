@@ -26,26 +26,22 @@
     var minutes = 45;
     var seconds = 0;
 
-    var timer = setInterval(function () 
-    {
+    var timer = setInterval(function () {
         seconds--;
 
-        if (seconds < 0) 
-        {
+        if (seconds < 0) {
             seconds = 59;
             minutes--;
         }
 
         renderTime();
 
-        if (minutes < 0) 
-        {
+        if (minutes < 0) {
             endProgram();
         }
     }, 1000);
 
-    function renderTime() 
-    {
+    function renderTime() {
         if (minutes < 10) {
             displayMinutes = "0" + minutes;
         } else {
@@ -56,7 +52,7 @@
         } else {
             displaySeconds = seconds;
         }
-        
+
         document.getElementById("timer").innerHTML =
             displayMinutes + ":" + displaySeconds;
     }
@@ -69,7 +65,7 @@
     }
 
     setInterval();
-    
+
 </script>
 
 </html>
